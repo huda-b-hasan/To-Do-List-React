@@ -1,0 +1,33 @@
+body{
+  margin:0;
+  padding:0;
+}
+.iconButtons{
+  transition: all 0.2s !important;
+}
+.iconButtons:hover{
+  box-shadow: 1px 0px 10px 0.2px rgba(61, 61, 61, 0.685);
+  background-color: rgba(255, 255, 255, 0.575) !important;
+}
+/* font google used */
+@font-face{
+  font-family:Tajawal;
+  src: url('/public/Fonts/Tajawal-Regular.ttf');
+  font-weight: normal;
+}
+@font-face{
+  font-family:Tajawal;
+  src: url('/public/Fonts/Tajawal-Bold.ttf');
+  font-weight: bold;
+}
+@font-face{
+  font-family:Tajawal;
+  src: url('/public/Fonts/Tajawal-Black.ttf');
+  font-weight: 900;
+}
+@font-face{
+  font-family: Tajawal;
+  src: url('/public/Fonts/Tajawal-Light.ttf');
+  font-weight: 200;
+}
+/* font google used */
