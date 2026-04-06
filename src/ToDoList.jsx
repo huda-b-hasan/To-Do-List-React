@@ -29,7 +29,7 @@ export default function ToDoList() {
     const { todos, setTodos,handleClick } = useContext(TaskDataContext);
         useEffect(() => {
     const storageTodos = JSON.parse(localStorage.getItem("todos")) || [];
-    setTodos(storageTodos);
+    setTodos(storageTodos || []);
     }, []);
 
     let t;
@@ -45,7 +45,7 @@ export default function ToDoList() {
         t = todos.filter((Task)=>{
             return !(Task.isComplete);
         })
-    }else {t=todos}
+    }else {t=todos || []}
     const ToDoList = t.map((Task) => {
             return <ToDo key={Task.id} TaskInfo={Task}  />
         });
