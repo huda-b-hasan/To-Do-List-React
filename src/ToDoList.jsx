@@ -27,6 +27,11 @@ export default function ToDoList() {
     // Array of ToDo 
     const [inputTask, setinputTask] = useState("");
     const { todos, setTodos,handleClick } = useContext(TaskDataContext);
+        useEffect(() => {
+    const storageTodos = JSON.parse(localStorage.getItem("todos")) || [];
+    setTodos(storageTodos);
+    }, []);
+
     let t;
     if(typeButton == "all"){
         t=todos
@@ -53,10 +58,6 @@ export default function ToDoList() {
     }
     // /Array of ToDo/ 
 
-    useEffect(() => {
-    const storageTodos = JSON.parse(localStorage.getItem("todos")) || "";
-    setTodos(storageTodos);
-    }, []);
 
     return (
 
